@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #0d192b;
+  padding: 2rem;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+}
+
+.card {
+  background: #14253d;
+  padding: 1.8rem;
+  border-radius: 20px;
+}
+
+.card section {
+  width: 100%;
+}
+
+.card section img {
+  display: block;
+  width: inherit;
+  border-radius: 12px;
+}
+
+.card-body {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  gap: 1.2rem;
+  border-bottom: 1px solid #2f415b;
+  margin-bottom: 1rem;
+}
+
+.card-body .card-title {
+  font-family: Outfit, sans-serif;
+  font-weight: 600;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.card-body .card-description {
+  width: 100%;
+  font-family: Outfit, sans-serif;
+  color: #8bacda;
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.card-body .sub-details {
+  width: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card-body .sub-details section {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+
+.card-body .sub-details section .eth {
+  font-family: Outfit, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #00fff7;
+}
+
+.card-body .sub-details section .time-left {
+  font-family: Outfit, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #8bacda;
+}
+
+.card-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.card-footer .avatar {
+  display: block;
+  width: 2.5rem;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.card-footer p {
+  font-family: Outfit, sans-serif;
+  font-size: 1.1rem;
+}
+
+.card-footer p .first {
+  color: #8bacda;
+}
+
+.card-footer p .second {
+  color: white;
+}
+
+.attribution {
+  font-family: Outfit, sans-serif;
+  font-size: 0.8rem;
+  color: white;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: #8bacda;
+}
