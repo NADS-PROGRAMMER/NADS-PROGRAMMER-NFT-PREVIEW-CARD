@@ -4,6 +4,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  user-select: none;
 }
 
 // Colors
@@ -13,7 +14,8 @@ $mainBG: hsl(217, 54%, 11%);
 $cardBG: hsl(216, 50%, 16%);
 $line: hsl(215, 32%, 27%);
 $white: hsl(0, 0%, 100%);
-
+$mainBGL: hsl(217, 54%, 11%);
+$cardBGL: rgba(11, 24, 44, 0.611);
 // Typography
 $outfit: Outfit, sans-serif;
 
@@ -30,15 +32,49 @@ body {
 .card {
   background: $cardBG;
   padding: 1.8rem;
+  padding-bottom: 2rem;
   border-radius: 20px;
-
-  section {
+  box-shadow: 0px 2.5rem 0px 18px hsl(216, 50%, 10.9%),
+    0px 1.9rem 0px 63px rgba(14, 27, 47, 0.438);
+  // 0.555
+  //.438
+  // rgb(14, 27, 47)
+  // hsl(217, 54%, 12%)
+  .card-image {
     width: 100%;
+    position: relative;
+    cursor: pointer;
     img {
       display: block;
       width: inherit;
       border-radius: 12px;
     }
+
+    .eye {
+      visibility: hidden;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .card-image::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+  }
+  section:hover::before {
+    background: $cyan;
+    opacity: 0.5;
+  }
+
+  section:hover .eye {
+    visibility: visible;
   }
 }
 
@@ -57,8 +93,12 @@ body {
     font-weight: 600;
     color: $white;
     font-size: 1.5rem;
+    cursor: pointer;
   }
 
+  .card-title:hover {
+    color: $cyan;
+  }
   .card-description {
     width: 100%;
     font-family: $outfit;
@@ -114,6 +154,11 @@ body {
 
     .second {
       color: $white;
+      cursor: pointer;
+    }
+
+    .second:hover {
+      color: $cyan;
     }
   }
 }
@@ -126,5 +171,20 @@ body {
   a {
     text-decoration: none;
     color: $softBlue;
+  }
+}
+
+@media only screen and (min-width: 540px) {
+  body {
+    align-items: center;
+  }
+  .card {
+    max-width: 25rem;
+  }
+
+  .attribution {
+    display: none;
+    font-size: 1rem;
+    font-weight: 400;
   }
 }
